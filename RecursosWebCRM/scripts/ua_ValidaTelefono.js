@@ -1,24 +1,20 @@
+//Función que valida la longitud y caracteres numéricos para Teléfono Principal.
 function validaTelefono(context) {
     var TNumber = Xrm.Page.getAttribute("telephone1").getValue();
-
-
     if (TNumber != null) {
+        //Recupero valor del Atributo en cuestión.
         var phone = context.getEventSource().getValue();
+        //Quitar caracteres distintos a los numéricos
         var sTmp = phone.replace(/[^0-9]/g, "");
-        phoneRegex = /^\d{10}$/;
-        ///phoneRegex = /^\d{{5,12}$/;
+        //Validación de longitud del dato.
+        phoneRegex = /^\d{8,12}$/;
         if (!sTmp.match(phoneRegex)) {
-
-            Xrm.Page.ui.setFormNotification("El telefono debe de contar con 10 caracteres numericos.", "ERROR",
-           "telephoneFail");
-            /// Xrm.Page.ui control.setNotification("El telefono debe de contar con 10 caracteres numericos.");
-
+            //Mensaje de Error.
+            Xrm.Page.ui.setFormNotification("El teléfono debe contar de 8 a 12 caracteres numéricos.", "ERROR", "telephoneFail");
         }
         else {
-            // var sTmpClean =  "(" + sTmp.substr(0, 3) + ")" + sTmp.substr(3, 3) + "-" + sTmp.substr(6, 4);
-            // Xrm.Page.getAttribute("telephone1").setValue(sTmpClean);
+            //Seteo del valor.
             Xrm.Page.getAttribute("telephone1").setValue(sTmp);
-            //context.getEventSource().setValue(sTmpClean);
             Xrm.Page.ui.clearFormNotification("telephoneFail");
         }
     }
@@ -27,56 +23,48 @@ function validaTelefono(context) {
     }
 }
 
-
-
+//Función que valida la longitud y caracteres numéricos para Teléfono Móvil.
 function validaTelefonoMovil(context) {
     var TNumber = Xrm.Page.getAttribute("mobilephone").getValue();
-    var Otigen = Xrm.Page.getAttribute("ua_origen").getValue();
-    //if(Origen != 3)
-    //  {
     if (TNumber != null) {
+        //Recupero valor del Atributo en cuestión.
         var phone = context.getEventSource().getValue();
+        //Quitar caracteres distintos a los numéricos
         var sTmp = phone.replace(/[^0-9]/g, "");
-        phoneRegex = /^\d{10}$/;
+        //Validación de longitud del dato.
+        phoneRegex = /^\d{10,12}$/;
         if (!sTmp.match(phoneRegex)) {
-
-            Xrm.Page.ui.setFormNotification("El telefono movil debe de contar con 10 caracteres numericos.", "ERROR",
-            "mobilephonefail");
-
+            //Mensaje de Error.
+            Xrm.Page.ui.setFormNotification("El télefono móvil debe contar de 10 a 12 caracteres numéricos.", "ERROR", "mobilephonefail");
         }
         else {
-            //var sTmpClean =  "(" + sTmp.substr(0, 3) + ")" + sTmp.substr(3, 3) + "-" + sTmp.substr(6, 4);
-            //Xrm.Page.getAttribute("mobilephone").setValue(sTmpClean);
+            //Seteo de datos.
             Xrm.Page.getAttribute("mobilephone").setValue(sTmp);
-            //context.getEventSource().setValue(sTmpClean);
             Xrm.Page.ui.clearFormNotification("mobilephonefail");
         }
     }
     else {
         Xrm.Page.ui.clearFormNotification("mobilephonefail");
     }
-    // }
 }
 
+//Función que valida la longitud y caracteres numéricos para Otro Teléfono.
 function validaTelefonoOtro(context) {
     var TNumber = Xrm.Page.getAttribute("telephone2").getValue();
-
-
     if (TNumber != null) {
+        //Recupero valor del Atributo en cuestión.
         var phone = context.getEventSource().getValue();
+        //Quitar caracteres distintos a los numéricos
         var sTmp = phone.replace(/[^0-9]/g, "");
-        phoneRegex = /^\d{10}$/;
+        //Validación de longitud del dato.
+        phoneRegex = /^\d{8,12}$/;
         if (!sTmp.match(phoneRegex)) {
-
-            Xrm.Page.ui.setFormNotification("El telefono debe de contar con 10 caracteres numericos.", "ERROR",
-           "telephone2Fail");
-
+            //Mensaje de Error.
+            Xrm.Page.ui.setFormNotification("El teléfono debe contar de 8 a 12 caracteres numéricos.", "ERROR", "telephone2Fail");
         }
         else {
-            // var sTmpClean =  "(" + sTmp.substr(0, 3) + ")" + sTmp.substr(3, 3) + "-" + sTmp.substr(6, 4);
-            // Xrm.Page.getAttribute("telephone2").setValue(sTmpClean);
+            //Seteo de Datos.
             Xrm.Page.getAttribute("telephone2").setValue(sTmp);
-            //context.getEventSource().setValue(sTmpClean);
             Xrm.Page.ui.clearFormNotification("telephone2Fail");
         }
     }
