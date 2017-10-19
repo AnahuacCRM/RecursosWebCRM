@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68670149-40FE-4EA9-A624-572B2C595F69}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RecursosWebCRM</RootNamespace>
+    <AssemblyName>RecursosWebCRM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\ua_beca_otorgada_16.png" />
+    <Content Include="images\ua_nacionalidad.png" />
+    <Content Include="images\ua_nacionalidad_16.png" />
+    <Content Include="images\ua_niveles_16px.png" />
+    <Content Include="images\ua_pais.png" />
+    <Content Include="images\ua_paisess_asesor32.png" />
+    <Content Include="images\ua_paises_asesor16.png" />
+    <Content Include="images\ua_pais_16px.png" />
+    <Content Include="images\ua_periodo.png" />
+    <Content Include="images\ua_periodo_16px.png" />
+    <Content Include="images\ua_programa.png" />
+    <Content Include="images\ua_programas_campus.png" />
+    <Content Include="images\ua_programas_campus_16.png" />
+    <Content Include="images\ua_programas_campus_por_asesor32.png" />
+    <Content Include="images\ua_programas_por_Campuas16.png" />
+    <Content Include="images\ua_programa_16.png" />
+    <Content Include="images\ua_religion.png" />
+    <Content Include="images\ua_religion_16.png" />
+    <Content Include="images\ua_solictud_beca_16.png" />
+    <Content Include="images\ua_solictud_beca_32.png" />
+    <Content Include="images\ua_submedio.png" />
+    <Content Include="images\ua_tipo_decision.png" />
+    <Content Include="images\ua_tipo_decision_16.png" />
+    <Content Include="images\ua_tipo_direccion.png" />
+    <Content Include="images\ua_tipo_direccion_16.png" />
+    <Content Include="images\ua_tipo_parentesco.png" />
+    <Content Include="images\ua_tipo_parentesco_16.png" />
+    <Content Include="images\ua_tipo_telefono.png" />
+    <Content Include="images\ua_tipo_telefono_16.png" />
+    <Content Include="images\ua_beca_otorgada_32.png" />
+    <Content Include="images\ua_carrera_universal.png" />
+    <Content Include="images\ua_carrera_universal_16.png" />
+    <Content Include="images\ua_carrera_web.png" />
+    <Content Include="images\ua_carrera_web_16.png" />
+    <Content Include="images\ua_clasificacion_colegio.png" />
+    <Content Include="images\ua_clasificacion_colegio_16px.png" />
+    <Content Include="images\ua_clas_colegio.png" />
+    <Content Include="images\ua_clas_colegio_16.png" />
+    <Content Include="scripts\ua_codigo_vpd4.js" />
+    <Content Include="scripts\ua_coincidencias_banner.js" />
+    <Content Include="images\ua_colegio.png" />
+    <Content Include="images\ua_colegios_por_asesor_16.png" />
+    <Content Include="images\ua_colegios_por_asesor_32.png" />
+    <Content Include="images\ua_colegio_16px.png" />
+    <Content Include="images\ua_colonia.png" />
+    <Content Include="images\ua_colonia_16.png" />
+    <Content Include="images\ua_contactado.png" />
+    <Content Include="images\ua_contactado_16px.png" />
+    <Content Include="images\ua_credito_educativo.png" />
+    <Content Include="images\ua_credito_educativo_16.png" />
+    <Content Include="images\ua_delegacion.png" />
+    <Content Include="images\ua_delegaciones_municipios_asesor16.png" />
+    <Content Include="images\ua_delegaciones_municipios_asesor32.png" />
+    <Content Include="images\ua_delegacion_16.png" />
+    <Content Include="images\ua_escuela.png" />
+    <Content Include="images\ua_escuela_16px.png" />
+    <Content Include="images\ua_estado.png" />
+    <Content Include="images\ua_estados_asesor.png" />
+    <Content Include="images\ua_estados_asesor32.png" />
+    <Content Include="images\ua_estado_16px.png" />
+    <Content Include="images\ua_estado_civil.png" />
+    <Content Include="images\ua_estado_civil_16px.png" />
+    <Content Include="images\ua_estatus_alumno.png" />
+    <Content Include="images\ua_estatus_alumno_16.png" />
+    <Content Include="images\ua_evento.png" />
+    <Content Include="images\ua_evento_16.png" />
+    <Content Include="scripts\ua_FaseActual.js" />
+    <Content Include="scripts\ua_filtroLookup.js" />
+    <Content Include="scripts\ua_filtroLookupOportunidad.js" />
+    <Content Include="scripts\ua_habilitarValidarCoincidencias.js" />
+    <Content Include="images\ua_logo.jpg" />
+    <Content Include="images\ua_medio.png" />
+    <Content Include="images\ua_medio_16px.png" />
+    <Content Include="images\ua_niveles.png" />
+    <Content Include="scripts\ua_prospecto.js" />
+    <Content Include="scripts\ua_SetPais.js" />
+    <Content Include="scripts\ua_SetPaisChange.js" />
+    <Content Include="scripts\ua_SetPaisChangeMovil.js" />
+    <Content Include="scripts\ua_SetPaisContacto.js" />
+    <Content Include="scripts\ua_SetPaisOportunidad.js" />
+    <Content Include="scripts\ua_SetProgramaV2.js" />
+    <Content Include="scripts\ua_SetProgramaV2OpCreaRapida.js" />
+    <Content Include="scripts\ua_SetProgramaV2Oportunidad.js" />
+    <Content Include="images\ua_submedio_16px.png" />
+    <Content Include="images\ua_tipo_admision.png" />
+    <Content Include="images\ua_tipo_admision_16.png" />
+    <Content Include="images\ua_tipo_alumno.png" />
+    <Content Include="images\ua_tipo_alumno_16.png" />
+    <Content Include="images\ua_tipo_contacto.png" />
+    <Content Include="images\ua_tipo_contacto_16.png" />
+    <Content Include="images\ua_tipo_correo.png" />
+    <Content Include="images\ua_tipo_correo_16.png" />
+    <Content Include="ua_validacion_coincidencias.html" />
+    <Content Include="scripts\ua_validaFechaNacimiento.js" />
+    <Content Include="scripts\ua_ValidaTelefono.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59846</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59846/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

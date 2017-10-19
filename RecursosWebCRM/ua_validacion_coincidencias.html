@@ -1,0 +1,92 @@
+<html><head>
+    <title>Consulta de Coincidencias</title>
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<meta></head>
+<body ng-app="MyApp" style="word-wrap: break-word;">
+    <div ng-controller="PostsCtrl" class="container">
+        <h3>Posibles Duplicados</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-condensed  table-striped">
+                <thead>
+                    <tr>
+                        <th>IdBanner</th>
+                        <th>Nombre</th>
+                        <th>Sexo</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cust in customers ">
+                        <td>{{ cust.IdBanner }}</td>
+                        <td>{{ cust.Nombre }}</td>
+                        <td>{{ cust.Sexo}}</td>
+                        <td>{{ cust.Direccion}}</td>
+                        <td>{{ cust.Telefono}}</td>
+                        <td>{{ cust.Correo}}</td>
+                        <td>{{ cust.fecha | date:'yyyy-MM-dd'}}</td>
+                        <td width="30px" ng-model="cust.IdBanner">
+                            <button type="button" ng-click="choseItem(cust.IdBanner)" class="btn btn-sm btn-success">
+                                <i class="glyphicon glyphicon-ok-circle">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <p> {{item}} </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    
+
+    <!--http://chieffancypants.github.io/angular-loading-bar/-->
+    <!--<script src="//code.angularjs.org/1.5.7/angular-animate.js"></script>-->
+    <!--<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>-->
+    <script>
+        var app = angular.module("MyApp", []);
+
+        app.controller("PostsCtrl",
+            function ($scope, $http) {
+                $scope.Data = '{"psNombre":"JUAN","psApellidoPaterno": "PEREZ", "psVPDI": "UAN"}';
+
+                //$http.defaults.useXDomain = true;
+                //delete $http.defaults.headers.common['X-Requested-With'];
+
+			   $http.post('http://crmbanner2.azurewebsites.net/api/ConsultaCoincidencia', $scope.Data).
+              success(function (data, status, headers, config) {
+                  $scope.customers = data;
+              }).
+              error(function (data, status, headers, config) {
+                  $scope.customers = null;
+                  // log error
+                  if (status === null || status === undefined ) {
+                      $scope.item = "Servicio no disponible";
+                  }
+                  else {
+                      if (status==-1) {
+                          $scope.item = "Servicio no disponible";
+                      }
+                      else
+                      $scope.item = "Error :" + status + ", " + data.Message;
+                  }
+              });
+                $scope.choseItem = function (source) {
+                    $scope.item = "Item selected:" + source + "!";
+                };
+
+            });
+    </script>
+
+
+
+</body></html>
